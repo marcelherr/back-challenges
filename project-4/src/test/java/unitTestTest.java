@@ -26,6 +26,17 @@ class unitTestTest {
     }
 
     @Test
+    public void isNotEvenTest_when3moduloNotEqual0_ThenReturnFalse() {
+        //Given
+        int c = 3;
+        //When
+        boolean actual = unitTest.isEven(c);
+        //Then
+        assertFalse(actual);
+    }
+
+
+    @Test
     public void productTest_when5and6_thenReturn30() {
         //Given
         int d = 5;
@@ -54,6 +65,17 @@ class unitTestTest {
         boolean actual = unitTest.isPositive(x);
         //Then
         assertTrue(actual);
+    }
+
+
+    @Test
+    public void isNotPositiveTest_whenMinus1_thenReturnFalse() {
+        //Given
+        int x = -1;
+        //When
+        boolean actual = unitTest.isPositive(x);
+        //Then
+        assertFalse(actual);
 
     }
 

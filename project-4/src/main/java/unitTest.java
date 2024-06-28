@@ -14,10 +14,7 @@ public class unitTest {
     }
 
     public static boolean isEven(int c) {
-        if (c % 2 == 0) {
-            return true;
-        }
-        return false;
+        return c % 2 == 0;
     }
 
     public static int product(int d, int e) {
@@ -29,9 +26,6 @@ public class unitTest {
     }
 
     public static boolean isPositive(int x) {
-        if (x > 0) {
-            return true;
-        }
-        return false;
+        return x > 0;
     }
 }
