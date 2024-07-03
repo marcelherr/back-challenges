@@ -20,8 +20,8 @@ public class main {
         weekendCar.brake();
         weekendCar.brake();
         Person MarcelsPerson = new Person("Marcel", 33, "Male", "Pineapple the Fruit Dude");
-        Person AlinasPerson = new Person("Alina", 30, "Female", "Stinki");
-        Person GroguPerson = new Person("Grogu", 50, "Male", "Biiibiii");
+        Person AlinasPerson = new Person("Alina", 30, "Female", "Bobbelz");
+        Person GroguPerson = new Person("Grogu", 50, "Male", "Bibi Yoda");
         MarcelsPerson.introduction();
         AlinasPerson.introduction();
         GroguPerson.introduction();
