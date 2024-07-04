@@ -19,4 +19,7 @@ public class Library {
         return "Library: " + Arrays.toString(booksArray);
     }
 
+//    public Book[] addBook(Book book) {
+//        booksArray = Arrays.copyOf(booksArray, booksArray.length + 1);
+//    }
 }
