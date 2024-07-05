@@ -18,5 +18,9 @@ public class Main {
         System.out.println(counter2);
         System.out.println(Counter.totalCount);
 
+        System.out.println(Calculator.add(4, 5));
+        System.out.println(Calculator.subtraction(10, 5));
+        System.out.println(Calculator.multiplication(6, 5));
+        System.out.println(Calculator.division(30, 5));
     }
 }
