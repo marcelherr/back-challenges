@@ -1,6 +1,9 @@
 public class Car extends Vehicle {
     private int numberOfDoors;
 
+    public Car() {
+        super();
+    }
 
     public Car(String manufacturer, String model, int year, int numberOfDoors) {
         super(manufacturer, model, year);
