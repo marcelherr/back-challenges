@@ -5,12 +5,12 @@ public class Main {
     public static void main(String[] args) {
 
         School school = new School();
-        school.addStudent(new Student("Alex", "Mueller", "1234"));
-        school.addStudent(new Student("Bernd", "Maier", "4321"));
-        school.addStudent(new Student("Bruno", "Schuler", "5678"));
+        school.addStudent("1234", new Student("Alex", "Mueller"));
+        school.addStudent("4321", new Student("Bernd", "Maier"));
+        school.addStudent("5678", new Student("Bruno", "Schuler"));
         school.printAll();
-        school.findById("5678");
-//        school.removeById("1234");
-//        school.printAll();
+        school.findByKey("1234");
+        school.removeByKey("1234");
+        school.printAll();
     }
 }

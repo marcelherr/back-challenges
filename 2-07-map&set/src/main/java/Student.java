@@ -1,15 +1,10 @@
 public class Student {
     private String firstName;
     private String lastName;
-    private String studentId;
 
-
-    public Student(String firstNAme, String lastName, String studentId) {
+    public Student(String firstNAme, String lastName) {
         this.firstName = firstNAme;
         this.lastName = lastName;
-        this.studentId = studentId;
-
-
     }
 
     public String getFirstNAme() {
@@ -20,9 +15,6 @@ public class Student {
         return lastName;
     }
 
-    public String getStudentId() {
-        return studentId;
-    }
 
     public void setFirstNAme(String firstNAme) {
         this.firstName = firstNAme;
@@ -32,15 +24,8 @@ public class Student {
         this.lastName = lastName;
     }
 
-    public void setStudentId(String studentId) {
-        this.studentId = studentId;
-    }
-
+    @Override
     public String toString() {
-        return "Student{" +
-                "firstNAme='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", studentId='" + studentId + '\'' +
-                '}';
+        return firstName + " | " + lastName;
     }
 }

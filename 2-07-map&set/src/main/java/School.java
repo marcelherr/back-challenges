@@ -1,42 +1,31 @@
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashMap;
+import java.util.Map;
 
 public class School {
 
-    private List<Student> students;
+    private Map<String, Student> students;
 
     public School() {
-        students = new ArrayList<>();
+        students = new HashMap<>();
     }
 
-
-    public void addStudent(Student student) {
-        students.add(student);
+    public void addStudent(String key, Student student) {
+        students.put(key, student);
     }
 
     public void printAll() {
-        for (Student student : students) {
+        for (Student student : students.values()) {
             System.out.println(student);
         }
     }
 
-    public void findById(String studentId) {
-        for (Student student : students) {
-            if (student.getStudentId().equals(studentId)) {
-                System.out.println("Der gesuchte Student ist: " + student.getFirstNAme() + " | " + student.getLastName());
-            }
-        }
+    public void findByKey(String key) {
+        students.get(key);
+        System.out.println(students.get(key));
     }
-//  finish this
-//    public void removeById(String studentId) {
-//        if (students.getStudentId().equals(studentId)) {
-//            students.remove(student);
-//            System.out.println("Der Student mit der ID: " + studentId + " wurde geloescht.");
-//        }
-//    }
+
+    public void removeByKey(String key) {
+        students.remove(key);
+    }
 }
-
-
-
-
 
