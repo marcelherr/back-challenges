@@ -1,11 +1,11 @@
 public class Student {
-    private String firstNAme;
+    private String firstName;
     private String lastName;
     private String studentId;
 
 
     public Student(String firstNAme, String lastName, String studentId) {
-        this.firstNAme = firstNAme;
+        this.firstName = firstNAme;
         this.lastName = lastName;
         this.studentId = studentId;
 
@@ -13,7 +13,7 @@ public class Student {
     }
 
     public String getFirstNAme() {
-        return firstNAme;
+        return firstName;
     }
 
     public String getLastName() {
@@ -25,7 +25,7 @@ public class Student {
     }
 
     public void setFirstNAme(String firstNAme) {
-        this.firstNAme = firstNAme;
+        this.firstName = firstNAme;
     }
 
     public void setLastName(String lastName) {
@@ -38,7 +38,7 @@ public class Student {
 
     public String toString() {
         return "Student{" +
-                "firstNAme='" + firstNAme + '\'' +
+                "firstNAme='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", studentId='" + studentId + '\'' +
                 '}';
