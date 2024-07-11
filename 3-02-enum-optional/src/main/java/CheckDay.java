@@ -12,7 +12,7 @@ public class CheckDay {
             case SUNDAY:
                 return "Weekend";
             default:
-                throw new AssertionError(day.name());
+                return "invalid day";
         }
     }
 }
