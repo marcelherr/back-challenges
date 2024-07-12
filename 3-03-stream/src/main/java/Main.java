@@ -33,7 +33,12 @@ public class Main {
                 .sorted()
                 .toList();
         System.out.println(ascendingOrder);
-        
+
+        int reducedNumber = numbers.stream()
+                .reduce(0, Integer::sum);
+        System.out.println(reducedNumber);
+
+
     }
 }
 
