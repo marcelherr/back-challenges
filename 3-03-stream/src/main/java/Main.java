@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -13,9 +14,26 @@ public class Main {
 
         List<Integer> evenNumbers = numbers.stream()
                 .filter(n -> n % 2 == 0)
-                .collect(Collectors.toList());
+                .toList();
         System.out.println(evenNumbers);
 
+        List<Integer> doubledNumbers = numbers.stream()
+                .map(n -> n * 2)
+                .toList();
+        System.out.println(doubledNumbers);
+
+
+        Collections.shuffle(numbers);
+
+        List<Integer> shuffeledNumbers = numbers;
+
+        System.out.println(shuffeledNumbers);
+
+        List<Integer> ascendingOrder = shuffeledNumbers.stream()
+                .sorted()
+                .toList();
+        System.out.println(ascendingOrder);
+        
     }
 }
 
