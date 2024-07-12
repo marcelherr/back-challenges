@@ -1,3 +1,4 @@
+import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -28,11 +29,10 @@ public class Main {
         //3
         Collections.shuffle(numbers);
 
-        List<Integer> shuffeledNumbers = numbers;
+        List<Integer> mixedNumbers = numbers;
 
-        System.out.println(shuffeledNumbers);
 
-        List<Integer> ascendingOrder = shuffeledNumbers.stream()
+        List<Integer> ascendingOrder = mixedNumbers.stream()
                 .sorted()
                 .toList();
         System.out.println("Sorted Numbers: " + ascendingOrder);
@@ -45,9 +45,9 @@ public class Main {
         //5
         evenNumbers.forEach(System.out::println);
         doubledNumbers.forEach(System.out::println);
-        shuffeledNumbers.forEach(System.out::println);
+        mixedNumbers.forEach(System.out::println);
         ascendingOrder.forEach(System.out::println);
-
+        
     }
 }
 
