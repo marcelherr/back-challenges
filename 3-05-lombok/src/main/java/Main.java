@@ -4,18 +4,44 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) {
 
-        Student student1 = new Student(12, "Alice", "123 Main St", "A");
-        Student student2 = new Student(23, "Bob", "456 Oak St", "B");
-        Student student3 = new Student(34, "Charlie", "789 Pine St", "A");
+        Student student1 = Student.builder()
+                .name("Alice")
+                .address("Main St 5")
+                .id(12)
+                .grade("B")
+                .build();
 
-        Teacher teacher1 = new Teacher(567, "Paul", "Math");
-        Teacher teacher2 = new Teacher(568, "Jack", "English");
+        Student student2 = Student.builder()
+                .id(23)
+                .name("Bob")
+                .address("456 Oak St")
+                .grade("A")
+                .build();
+
+        Student student3 = Student.builder()
+                .id(34)
+                .name("Charlie")
+                .address("789 Pine St")
+                .grade("C")
+                .build();
+
+        Teacher teacher1 = Teacher.builder()
+                .id(567)
+                .name("Paul")
+                .subject("Math")
+                .build();
+
+        Teacher teacher2 = Teacher.builder()
+                .id(678)
+                .name("John")
+                .subject("English")
+                .build();
+
 
         List<Student> studentList = new ArrayList<>();
         studentList.add(student1);
         studentList.add(student2);
 
-        
         List<Student> studentList2 = new ArrayList<>();
         studentList2.add(student3);
 
