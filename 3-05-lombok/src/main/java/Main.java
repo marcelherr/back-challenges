@@ -49,7 +49,7 @@ public class Main {
 
 
         Course c1 = new Course(123, "c1", teacher1, studentList);
-        Course c2 = new Course(123, "c2", teacher2, studentList2);
+        Course c2 = new Course(123, "c2", updatedTeacher2, studentList2);
 
         System.out.println(c1);
         System.out.println(c2);
