@@ -37,6 +37,8 @@ public class Main {
                 .subject("English")
                 .build();
 
+        Teacher updatedTeacher2 = teacher2.withSubject("Sports");
+
 
         List<Student> studentList = new ArrayList<>();
         studentList.add(student1);
@@ -44,6 +46,7 @@ public class Main {
 
         List<Student> studentList2 = new ArrayList<>();
         studentList2.add(student3);
+
 
         Course c1 = new Course(123, "c1", teacher1, studentList);
         Course c2 = new Course(123, "c2", teacher2, studentList2);

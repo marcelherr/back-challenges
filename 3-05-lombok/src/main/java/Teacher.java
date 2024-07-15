@@ -1,5 +1,6 @@
 import lombok.Builder;
+import lombok.With;
 
 @Builder
-public record Teacher(int id, String name, String subject) {
+public record Teacher(@With int id, @With String name, @With String subject) {
 }
