@@ -10,4 +10,5 @@ public class Course {
     private String name;
     private Teacher teacher;
     private List<Student> students;
+
 }
