@@ -30,8 +30,13 @@ public class Main {
         LocalDateTime startTime = LocalDateTime.now();
         LocalDateTime endTime = LocalDateTime.now().plusHours(2);
 
-        long difference = ChronoUnit.HOURS.between(startTime, endTime);
-        System.out.println("The difference is: " + difference);
+        long differenceDays = ChronoUnit.DAYS.between(startTime, endTime);
+        long differenceHours = ChronoUnit.HOURS.between(startTime, endTime);
+        long differenceMinutes = ChronoUnit.MINUTES.between(startTime, endTime);
+
+        System.out.println("The difference is: " + differenceDays + " days.");
+        System.out.println("The difference is: " + differenceHours + " hours.");
+        System.out.println("The difference is: " + differenceMinutes + " minutes.");
 
     }
 }
