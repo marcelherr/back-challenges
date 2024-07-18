@@ -2,6 +2,7 @@ package org.example.firstcontrollers;
 
 import org.springframework.web.bind.annotation.*;
 
+
 @RestController
 @RequestMapping("/api")
 public class Hello {
@@ -15,4 +16,5 @@ public class Hello {
     public String helloSomeone(@PathVariable String name) {
         return "Hello, " + name + " !";
     }
+
 }
