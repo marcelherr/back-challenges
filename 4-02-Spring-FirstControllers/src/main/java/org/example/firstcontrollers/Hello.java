@@ -1,8 +1,6 @@
 package org.example.firstcontrollers;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api")
@@ -13,8 +11,8 @@ public class Hello {
         return "Hello World";
     }
 
-    @GetMapping("/hello/john")
-    public String helloSomeone() {
-        return "Hello, John!";
+    @PostMapping("/hello/{name}")
+    public String helloSomeone(@PathVariable String name) {
+        return "Hello, " + name + " !";
     }
 }
