@@ -1,14 +1,12 @@
 package org.example.asterixapi;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api")
+@RequestMapping("/api/characters")
 public class AsterixController {
 
     private final AsterixRepo asterixRepo;
@@ -17,10 +15,16 @@ public class AsterixController {
         this.asterixRepo = asterixRepo;
     }
 
-    @GetMapping("/characters")
+    @GetMapping
     public List<Character> getAllCharacters() {
         List<Character> allCharacters = asterixRepo.findAll();
         return allCharacters;
     }
+
+    @PostMapping
+    public Character addCharacter(@RequestBody Character character) {
+        return asterixRepo.save(character);
+    }
+
 
 }
