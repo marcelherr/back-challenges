@@ -9,25 +9,31 @@ import java.util.List;
 @RequestMapping("/api/characters")
 public class AsterixController {
 
-    private final AsterixRepo asterixRepo;
 
-    public AsterixController(AsterixRepo asterixRepo) {
-        this.asterixRepo = asterixRepo;
+    private final AsterixService asterixService;
+
+    public AsterixController(AsterixService asterixService) {
+        this.asterixService = asterixService;
     }
 
     @GetMapping
     public List<Character> getAllCharacters() {
-        List<Character> allCharacters = asterixRepo.findAll();
-        return allCharacters;
+        return asterixService.findAllCharacters();
     }
 
     @PostMapping
     public Character addCharacter(@RequestBody Character character) {
-        return asterixRepo.save(character);
+        return asterixService.saveCharacter(character);
     }
 
     @DeleteMapping("/{id}")
     public void deleteCharacterById(@PathVariable String id) {
-        asterixRepo.deleteById(id);
+        asterixService.deleteCharacterById(id);
     }
+
+    @PutMapping("/{id}")
+    public Character updateCharacterById(@PathVariable String id, @RequestBody Character character) {
+        return asterixService.updateCharacterById(id, character);
+    }
+
 }
