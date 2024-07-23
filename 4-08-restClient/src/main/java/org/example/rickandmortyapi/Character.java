@@ -1,6 +1,6 @@
 package org.example.rickandmortyapi;
 
-public record Charater(
+public record Character(
         String id,
         String name,
         String species

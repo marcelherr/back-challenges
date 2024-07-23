@@ -16,7 +16,7 @@ public class ApiService {
                 .build();
     }
 
-    public List<Charater> loadAllCharacters() {
+    public List<Character> loadAllCharacters() {
         ApiResponse responseBody = restClient
                 .get()
                 .uri("/character")

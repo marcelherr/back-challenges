@@ -4,7 +4,7 @@ import java.util.List;
 
 public record ApiResponse(
         ApiResponseInfo info,
-        List<Charater> results
+        List<Character> results
 ) {
 
 }
