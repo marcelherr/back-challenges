@@ -27,10 +27,8 @@ public class AsterixIntegrationTest {
     @Test
     @DirtiesContext
     void getAllCharacters() throws Exception {
-
         //Given
         asterixRepo.save(new Character("1", "Tester1", 22, "Testing"));
-
         //When
         mockMvc.perform(get("/api/characters"))
 
@@ -56,13 +54,20 @@ public class AsterixIntegrationTest {
                         .contentType(MediaType.APPLICATION_JSON)
                         .content("""
                                 {
-                                   "name":"Tester2",
-                                                        "age":33,
-                                                        "profession":"Testing2"
-
+                                "name":"Tester2",
+                                "age":33,
+                                "profession":"Testing2"
                                 }
                                 """))
                 .andExpect(jsonPath("$.id").exists());
+    }
 
+    @Test
+    @DirtiesContext
+    void getCharacterById() throws Exception {
+        //Given
+        asterixRepo.save(new Character("1", "Tester1", 22, "Testing"));
+        //When
+        mockMvc.perform(get("/api/characters/1"))
     }
 }
