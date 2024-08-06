@@ -1,12 +1,1 @@
-const age: number = 33;
-
-console.log(age)
-
-// Step 1
-for (let i = 1; i <= age; i++) {
-    console.log(i);
-}
-
-//Step2
-
-
+https://github.com/neuefische/hh-java-24-3-handouts/blob/main/5-Frontend/03-TypeScript-Basic/challenges.md
