@@ -1,0 +1,22 @@
+div {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+section {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: 50px;
+}
+
+.navbar {
+    position: absolute;
+    top: -30px;
+    left: -250px;
+
+}
