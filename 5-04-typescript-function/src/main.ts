@@ -37,3 +37,4 @@ console.log(sortedList)
 const squaredList = sortedList.map(n => n * n)
 
 console.log(squaredList)
+
