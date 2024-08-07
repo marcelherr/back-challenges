@@ -1,8 +1,8 @@
 //Step1
 console.log("-Step 1-------------------------")
 type Student = {
-    firstName: String;
-    lastName: String;
+    firstName: string;
+    lastName: string;
     age: number;
     grades: GradeNumbers[];
 }
@@ -29,8 +29,8 @@ console.log("-Step 2-------------------------")
 type GradeString = "A" | "B" | "C" | "D" | "E" | "F";
 
 type Student2 = {
-    firstName: String;
-    lastName: String;
+    firstName: string;
+    lastName: string;
     age: number;
     grades: (GradeNumbers | GradeString | "*")[];
 }
@@ -61,7 +61,7 @@ console.log("-Step 4-------------------------")
 const studentList = [student1, student2, student3]
 
 function outputListOfStudents(studentList: Student2[]) {
-    studentList.forEach(student => output(student))
+    studentList.forEach(output)
 }
 
 outputListOfStudents(studentList)
