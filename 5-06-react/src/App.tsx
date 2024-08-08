@@ -46,7 +46,6 @@ export default function App() {
         }
     ]
 
-
     type data = {
         id: number,
         heading: string,
@@ -59,7 +58,7 @@ export default function App() {
             <Header/>
             <section>
                 <div className="navbar">
-                    <Navbar/>
+                    <Navbar entries={entries}/>
                 </div>
                 <Blog entries={entries}/>
             </section>

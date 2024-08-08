@@ -1,13 +1,13 @@
 import './Card.css'
 
-type data = {
-    id: number,
+type DataPropType = {
+    id?: number,
     heading: string,
     img: string,
     description: string
 }
 
-export default function Card({heading, img, description}: data) {
+export default function Card({heading, img, description}: DataPropType) {
 
     return (
         <article>

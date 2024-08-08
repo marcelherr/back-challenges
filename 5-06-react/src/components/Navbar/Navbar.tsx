@@ -1,12 +1,20 @@
 import './Navbar.css'
 
-export default function Navbar() {
+type data = {
+    id: number,
+    heading: string,
+    img: string,
+    description: string
+}
+type dataProps = {
+    entries: data[]
+}
+export default function Navbar({entries}: dataProps) {
 
     return (
         <ul>
-            <li>Cat 1</li>
-            <li>Cat 2</li>
-            <li>Cat 3</li>
+            {entries.map(entry => <li key={entry.id}>{entry.heading}</li>)}
+
         </ul>
     )
 }

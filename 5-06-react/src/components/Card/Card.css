@@ -4,6 +4,7 @@ article {
     flex-direction: column;
     padding: 10px;
     border-radius: 10px;
+    width: 420px;
 }
 
 h2 {
