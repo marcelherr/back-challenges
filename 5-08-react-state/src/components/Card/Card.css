@@ -1,0 +1,9 @@
+.cardList {
+    background-color: lightslategray;
+    border-radius: 10px;
+}
+
+.cardImage {
+    width: 300px;
+}
+
