@@ -1,0 +1,9 @@
+ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 50px;
+    background-color: #213547;
+    text-decoration: none;
+}
