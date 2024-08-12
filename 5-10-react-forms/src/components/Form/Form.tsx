@@ -1,31 +1,43 @@
-import {useState} from "react";
+import {ChangeEvent, FormEvent, useState} from "react";
 
 export default function CharacterForm() {
 
-    const [user, setUser] = useState({id: "", name: "", species: "", status: ""})
+    type Character = {
+        name: string,
+        species: string,
+        status: string,
+        id: string
+    }
 
-    function addCharacter(event) {
+    const [character, setCharacter] = useState<Character>({id: "", name: "", species: "", status: ""})
+
+    const onChange = (event: ChangeEvent<HTMLInputElement>) => {
+        setCharacter({...character, [event.target.name]: event.target.value})
+    }
+
+
+    function addCharacter(event: FormEvent<HTMLFormElement>) {
         event.preventDefault();
-        console.log("addCharacter")
+        console.log("addCharacter", character)
     }
 
     return (
         <>
             <h3>Add Character</h3>
-            <form onSubmit={() => addCharacter}>
-                <label>
-                    <input placeholder={"Id"}/>
+            <form onSubmit={addCharacter}>
+                <label>ID:
+                    <input value={character.id} name="id" onChange={onChange} placeholder={"Id"}/>
                 </label>
-                <label>
-                    <input placeholder={"name"}/>
+                <label>Name:
+                    <input value={character.name} name="name" onChange={onChange} placeholder={"name"}/>
                 </label>
-                <label>
-                    <input placeholder={"species"}/>
+                <label>Species
+                    <input value={character.species} name="species" onChange={onChange} placeholder={"species"}/>
                 </label>
-                <label>
-                    <input placeholder={"status"}/>
+                <label>Status
+                    <input value={character.status} name="status" onChange={onChange} placeholder={"status"}/>
                 </label>
-                <button>Submit</button>
+                <button type={"submit"}>Submit</button>
             </form>
         </>
     )
